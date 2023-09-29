@@ -2,7 +2,7 @@
 
 
 
-.light{
+:root{
     --mainColor: #a091fc;
     --hoverColor: #621fce;
     --backgroundColor: #f8f9fd;
@@ -16,7 +16,7 @@
 .dark{
     --mainColor: #a091fc;   
     --hoverColor: #621fce;
-    --backgrounColor: #400073;
+    --backgroundColor: #400073;
     --darkOne: #f3f3f3;
     --darkTwo: #fff;
     --lightOne:#ccc;
@@ -35,20 +35,21 @@
 
 body{
     font-family: "Rubik", sans-serif;
-    background-color: var(--backgrounColor);
+
 }
 
-main{
+main {
 
     position: relative;
     padding: 1.7rem 0 2rem;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: #400073;
+    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 0.3s;
 
 }
 
@@ -71,27 +72,37 @@ header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .logo{
     display: flex;
     align-items: center;
     cursor: pointer;
+    
 
 }
 
 .logo img{
-    width: 40px;
+    min-width: 30%  ;
     margin-right: 0.6rem;
     margin-top: -0.6rem;   
+   
 }
 
 .logo h3{
-    color: #fff;
+    color: var(--darkTwo);
     font-size: 1.55rem;
     line-height: 1.2rem;
     font-weight: 700;
+    min-width: 30%;
 
+}
+
+.links-themas{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .links ul{
@@ -101,15 +112,40 @@ header .container{
 }
 
 .links a{
-    color: #aaa;
+    color: var(--lightTwo);
     margin-right: 4.5rem;
     display: inline-block;
     transition: 0.3s;
 }
 
 .links a:hover{
-    color: #621fce;
+    color: var(--hoverColor);
 }
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.bi{
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--darkTwo);
+}
+
+.bi-sun{
+    display: none; 
+}
+
+.dark .bi-sun{
+    display: block;
+    color: var(--lightTwo);
+}
+
+.dark .bi-moon{
+    display: none;
+}
+
+
 
 .showcase-area .container{
     display: grid;
@@ -123,7 +159,7 @@ header .container{
 .btn{
     display: inline-block;
     padding: 0.9rem 1.9rem ;
-    color: #fff;
+    color: var(--darkTwo);
     background-color: #a091fc;
     border-radius: 16px;
     text-transform: capitalize;
@@ -131,19 +167,19 @@ header .container{
 }
 
 .btn:hover{
-    background-color: #621fce;
+    background-color: var(--hoverColor);
     transform: scale(1);
 }
 
 .big-title{
     font-size: 1.4rem;
-    color: white;
+    color: var(--darkOne);
     text-transform: capitalize;
     line-height: 1.4;
 }
 
 .text{
-    color: #919191;
+    color: var(--lightOne);
     font-size: 1.1rem;
     margin:1.9rem 0 2.5rem;
     max-width: 600px;
@@ -156,6 +192,7 @@ div img{
 
     padding: 2em;
 }
+
 
 .chat{
     width: 80%;
@@ -182,10 +219,14 @@ div img{
 
     .links{
         display: none;
+        
     }
+
+   
 
     .header .container{
         padding-top: 10rem;
+       
     }
 
 
