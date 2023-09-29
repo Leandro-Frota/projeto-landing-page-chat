@@ -54,7 +54,7 @@ main{
 
 .container{
     position: relative;
-    max-width: 81rem;
+    max-width: 100vw;
     width: 100%;
     margin: o auto;
     padding: 0 3rem;
