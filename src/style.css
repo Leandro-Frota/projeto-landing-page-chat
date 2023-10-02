@@ -2,38 +2,38 @@
 
 
 
-:root{
+:root {
     --mainColor: #a091fc;
     --hoverColor: #621fce;
     --backgroundColor: #f8f9fd;
     --darkOne: #312f3a;
     --darkTwo: #400073;
     --lightOne: #919191;
-    --lightTwo:#aaa;
-    
+    --lightTwo: #aaa;
+
 }
 
-.dark{
-    --mainColor: #a091fc;   
+.dark {
+    --mainColor: #a091fc;
     --hoverColor: #621fce;
     --backgroundColor: #400073;
     --darkOne: #f3f3f3;
     --darkTwo: #fff;
-    --lightOne:#ccc;
+    --lightOne: #ccc;
     --lightTwo: #e7e3e3;
- 
+
 
 }
 
 *,
 *::before,
-*::after{
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Rubik", sans-serif;
 
 }
@@ -53,7 +53,7 @@ main {
 
 }
 
-.container{
+.container {
     position: relative;
     max-width: 100vw;
     width: 100%;
@@ -62,35 +62,35 @@ main {
     z-index: 10;
 }
 
-header{
+header {
     position: relative;
     z-index: 70;
 
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+
 
 }
 
-.logo img{
-    min-width: 30%  ;
+.logo img {
+    width: 4rem;
     margin-right: 0.6rem;
-    margin-top: -0.6rem;   
-   
+    margin-top: -0.6rem;
+
 }
 
-.logo h3{
+.logo h3 {
     color: var(--darkTwo);
     font-size: 1.55rem;
     line-height: 1.2rem;
@@ -99,66 +99,66 @@ header .container{
 
 }
 
-.links-themas{
+.links-themas {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.links ul{
+.links ul {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
-.links a{
+.links a {
     color: var(--lightTwo);
     margin-right: 4.5rem;
     display: inline-block;
     transition: 0.3s;
 }
 
-.links a:hover{
+.links a:hover {
     color: var(--hoverColor);
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
 
-.bi{
+.bi {
     font-size: 2rem;
     cursor: pointer;
     color: var(--darkTwo);
 }
 
-.bi-sun{
-    display: none; 
+.bi-sun {
+    display: none;
 }
 
-.dark .bi-sun{
+.dark .bi-sun {
     display: block;
     color: var(--lightTwo);
 }
 
-.dark .bi-moon{
+.dark .bi-moon {
     display: none;
 }
 
 
 
-.showcase-area .container{
+.showcase-area .container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     padding-bottom: 10rem;
 
 }
 
-.btn{
+.btn {
     display: inline-block;
-    padding: 0.9rem 1.9rem ;
+    padding: 0.9rem 1.9rem;
     color: var(--darkTwo);
     background-color: #a091fc;
     border-radius: 16px;
@@ -166,68 +166,75 @@ input[type="checkbox"]{
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--hoverColor);
     transform: scale(1);
 }
 
-.big-title{
+.big-title {
     font-size: 1.4rem;
     color: var(--darkOne);
     text-transform: capitalize;
     line-height: 1.4;
 }
 
-.text{
+.text {
     color: var(--lightOne);
     font-size: 1.1rem;
-    margin:1.9rem 0 2.5rem;
+    margin: 1.9rem 0 2.5rem;
     max-width: 600px;
     line-height: 2.3;
 
-
 }
 
-div img{
+div img {
 
+    padding: 1em;
+}
+
+.chat {
+    width: 80%;
+    transform: translate(15%, 25px);
     padding: 2em;
 }
 
-
-.chat{
-    width: 80%;
-    transform: translate(15%,25px);
-}
-
-@media (max-width: 768px){
-    .showcase-area .container{
+@media (max-width: 900px) {
+    .showcase-area .container {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .left{
+    .left {
         order: 2;
         padding: 0 2rem;
     }
 
-    .chat{
+    .chat {
         min-width: 80%;
-        transform: translate(0,0);
+        transform: translate(0, 0);
         padding: 10px;
 
     }
 
-    .links{
+    .links {
         display: none;
-        
+
     }
 
-   
+    header .container {
+        padding: 0.5rem;
+     
 
-    .header .container{
-        padding-top: 10rem;
-       
     }
 
+}
 
+@media (max-width: 425px) {
+
+
+    .links-themas {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
 }
